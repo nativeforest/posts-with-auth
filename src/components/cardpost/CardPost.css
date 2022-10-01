@@ -1,0 +1,12 @@
+.card-post-container{
+  display: flex;
+  padding: 1rem;
+  border-top-color: #593D88;
+  border-top-style: solid;
+  border-top-width: 0.5em;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.card-post-container__image{
+  border-radius: 1rem;
+}

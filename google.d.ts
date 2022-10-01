@@ -1,4 +1,4 @@
-exports 
+export {}
 /// <reference types="google-one-tap" />
 /// <reference types="google.accounts" />
 

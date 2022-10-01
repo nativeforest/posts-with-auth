@@ -1,33 +1,39 @@
-import React, { useEffect } from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React from 'react';
+// import logo from './logo.svg';
+
 import './App.css';
+import {
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+
+import { PostPage } from './pages/PostPage/PostPage';
+import { LoginPage } from './pages/LoginPage/LoginPage';
+import { Platform } from './pages/Platform/Platform';
+import { RequireAuth } from './components/requireAuth/RequireAuth';
+import { useSelector } from 'react-redux';
 
 function App() {
-  const handleCallbackResponse = (response: google.accounts.id.CredentialResponse) => {
-    console.log("Encoded JWT",response.credential);
-  };
-  useEffect(() => {
-    /* global google */
-   google.accounts.id.initialize({
-      client_id: '282669505556-8hn58876v5ktiqd998vmlgki3n7l0pro.apps.googleusercontent.com',
-      callback: handleCallbackResponse,
-    })
-    google.accounts.id.renderButton(
-      (document.getElementById('signInDiv') as HTMLInputElement),
-      {theme: 'outline', size: 'large', type: 'standard'},
-    )
-      
-    
-  }, []);
+  const isAuth = useSelector((state: any) => state.user.isAuth && state.user.user.email_verified);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div id="signInDiv"></div>
-        <Counter />
-      </header>
-    </div>
+    <Routes>
+      <Route path="login" element={<LoginPage />}></Route>
+      <Route path="/" element={<Navigate to="login" replace />}></Route>
+      <Route path="/*" element={
+      <RequireAuth isAuth={isAuth}>
+        <Platform />
+      </RequireAuth>
+    }>
+        <Route path="home" element={<PostPage />}></Route>
+        {/* <Route path="cat-breeds" element={<CatBreeds />}></Route> */}
+        {/* <Route path="cat-breeds/:id" element={<CatBreedsDetails />}></Route> */}
+        {/* <Route path="about" element={<About />}></Route> */}
+        <Route path="*" element={<div>Not found</div>}></Route>
+      </Route>
+    </Routes>
+    
   );
 }
 
