@@ -1,0 +1,11 @@
+.tag-container{
+  background-color: #00B0FF;
+  color: #fff;
+  padding: 0.1rem 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.1rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  font-size: 0.8rem;
+
+}

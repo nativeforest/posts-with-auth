@@ -1,12 +1,48 @@
 .card-post-container{
   display: flex;
   padding: 1rem;
-  border-top-color: #593D88;
+  border-top-color: #9E9AFF;;
   border-top-style: solid;
   border-top-width: 0.5em;
   border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  height: 15rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .card-post-container__image{
   border-radius: 1rem;
+}
+.card-post-container__description{
+  color: gray;
+  width: 15rem;
+
+}
+.card-post-container__tags{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.card-post-container__see-icon{
+  cursor: pointer;
+}
+.card-post-container__btn-comments{
+  border-radius: 0.3rem;
+  width: fit-content;
+  padding: 0.1rem 0.4rem;
+  color: white;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  background: rgb(123,120,208);
+  background: linear-gradient(97deg, rgba(123,120,208,1) 30%, rgba(3,152,219,1) 78%);  
+
+}
+.card-post-container__image{
+  object-fit: cover;
+  width: 8rem;
+
+
+}
+.card-post-container__boot-section{
+  margin-top: 0.4rem;
 }

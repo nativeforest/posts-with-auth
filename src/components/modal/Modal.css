@@ -1,10 +1,45 @@
 .modal{
   display: flex;
   position: fixed;
-  background-color: aqua;
+  background-color: rgba(128, 128, 128, 0.329);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.modal__btn-close{
+  justify-content: end;
+  display: flex;
+  
+}
+.btn-close{
+  background-color: white;
+  border: none;
+  box-shadow: rgba(9, 9, 47, 0.96) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 40%;
+  transition: 0.3s;
 
+
+}
+.btn-close:hover{
+  background-color: #593D88;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+}
+.modal__container{
+  background-color: white;
+padding: 1rem 1rem;
+border-radius: 1rem;
+width: 30rem;
+opacity: 1;
+background-color: #fff;
+}
+.modal__content{
+  
+height: 50vh;
+overflow-y: scroll;
 }

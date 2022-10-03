@@ -13,6 +13,7 @@ import { LoginPage } from './pages/LoginPage/LoginPage';
 import { Platform } from './pages/Platform/Platform';
 import { RequireAuth } from './components/requireAuth/RequireAuth';
 import { useSelector } from 'react-redux';
+import { AboutPage } from './pages/AboutPage/AboutPage';
 
 function App() {
   const isAuth = useSelector((state: any) => state.user.isAuth && state.user.user.email_verified);
@@ -27,6 +28,7 @@ function App() {
       </RequireAuth>
     }>
         <Route path="home" element={<PostPage />}></Route>
+        <Route path="about" element={<AboutPage />}></Route>
         {/* <Route path="cat-breeds" element={<CatBreeds />}></Route> */}
         {/* <Route path="cat-breeds/:id" element={<CatBreedsDetails />}></Route> */}
         {/* <Route path="about" element={<About />}></Route> */}

@@ -17,14 +17,14 @@ function Modal({
     <div className='modal__container' onClick={container }>
             {
                 onClose && (
-                    <section className=''>
-                        <button onClick={ onClose }>
-                            XXXXX
+                    <section className='modal__btn-close'>
+                        <button className='btn-close' onClick={ onClose }>
+                            x
                         </button>
                     </section>
                 )
             }
-        <section className='modal__content'>
+        <section className='modal__content scroller-thin'>
             { children }
         </section>
     </div>

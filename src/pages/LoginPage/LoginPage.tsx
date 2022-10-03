@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setUser } from '../../redux/reducers/userSlice';
-
+import './LoginPage.css';
 function LoginPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -39,8 +39,9 @@ function LoginPage() {
     
   }, []);
   return (
-    <div>
-      <h3>Login</h3>
+    <div className='login-container'>
+      <h1>Welcome to Post Platform!</h1>
+      <h3 className='login-container__subtitle'>Sign In </h3>
       <div 
       // ref={googleDiv} 
       id="sign-in-google"></div>

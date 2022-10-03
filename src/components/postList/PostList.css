@@ -1,0 +1,11 @@
+.posts-container__posts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.posts-container__loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
